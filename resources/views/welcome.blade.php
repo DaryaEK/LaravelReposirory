@@ -9,20 +9,20 @@
 .clear{
   clear: both;
 }
-/* Оболочка */
+
 #wrapper{
-    width: 900px; /* Ширина */
-    outline: 1px solid #787274; /* Временная рамка. Нужна при вёрстке для контроля границ блока */
-    padding: 10px; /* Внутренний отступ границ блока от элементов расположенных внутри блока */
-    margin: auto; /* Выравнивание по центру экрана монитора */
+    width: 900px; 
+    outline: 1px solid #787274;
+    padding: 10px; 
+    margin: auto; 
 }
-/* Шапка сайта */
+
 #header{
-    height: 80px;/* Высота. Ширина по умолчанию занимает ширину оболочки */
-    background: #9370DB; /* Фоновый цвет */
-    margin: auto; /* Отступ снизу */
+    height: 80px;
+    background: #9370DB; 
+    margin: auto; 
 }
-/* Сайдбар */
+
 #sidebar{
 background-color: #DA70D6;
 margin-bottom: 10px;
@@ -37,14 +37,14 @@ width: 620px;
 padding: 10px;
 }
 #footer{
-    height: 50px; /* Высота. Ширина по умолчанию занимает ширину оболочки */
-    background: #9370DB; /* Фоновый цвет */
-    margin-bottom: 10px; /* Отступ снизу */
+    height: 50px; 
+    background: #9370DB; 
+    margin-bottom: 10px; 
 }
 body {
-    margin: 0; /* Убираем отступы */
-    height: 100%; /* Высота страницы */
-    background-size: cover; /* Фон занимает всю доступную площадь */
+    margin: 0; 
+    height: 100%;
+    background-size: cover; 
     font-family: Georgia, 'Times New Roman';
 
    } 
@@ -72,7 +72,7 @@ body {
         </div>
         <div class="clear"></div>
         <div id="footer">
-        <div style="font-size:18pt" align="center" ><a href="http://laravl/public/pages"><b>Статьи</b></div>
+        <div style="font-size:18pt" align="center" ><a href="{{ url('/pages') }}"><b>Статьи</b></div>
         </div>
     </div>
 </body>
