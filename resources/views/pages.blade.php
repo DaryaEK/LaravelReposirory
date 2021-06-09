@@ -6,7 +6,6 @@
 </head>
 <body bgcolor="#E6E6FA">
 
-
 @foreach($pages as $page)
 <article>
 <p>{{$page['head']}}</p>

@@ -34,7 +34,7 @@ class PageController extends Controller
 
         public function show($slug)
         {
-            return view('pages1', ['pages1' => collect($this->pages)->where('slug', $slug)->first]);
+            return view('page', ['page' => collect($this->pages)->where('slug', $slug)->first()]);
 
         }
 
