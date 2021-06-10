@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Models\Category;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,12 +19,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pages', [
+Route::get('/posts', [
     PageController::class, 'index'
-]
-);
+])->name('post.main');
 
-Route::get('/pages/{slug}', [
+Route::get('/posts/{post:slug}', [
     PageController::class, 'show'
-]
-);
+])->name('post.show');
+
+Route::get('/categories/{category}', function (Category $category)
+{
+    return view('posts', [
+        'posts' => $category->posts
+    ]);
+});
+
+ 
+

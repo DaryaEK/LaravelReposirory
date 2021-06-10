@@ -72,7 +72,7 @@ body {
         </div>
         <div class="clear"></div>
         <div id="footer">
-        <div style="font-size:18pt" align="center" ><a href="{{ url('/pages') }}"><b>Статьи</b></div>
+        <div style="font-size:18pt" align="center" ><a href="{{ url('/posts') }}"><b>Статьи</b></div>
         </div>
     </div>
 </body>
