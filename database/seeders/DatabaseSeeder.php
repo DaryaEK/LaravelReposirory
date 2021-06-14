@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
         Post::truncate();
 
 
-         $user = \App\Models\User::factory()->create();
+         $user = User::factory()->create();
 
          $sport = Category::create(
              [

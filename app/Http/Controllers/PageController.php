@@ -12,7 +12,7 @@ class PageController extends Controller
         public function index()
         {
             
-            return view('posts', ['posts' => Post::all()]);
+            return view('posts', ['posts' => Post::with('category')->get()]);
         }
 
         public function show(Post $post)
