@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Models\Category;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,10 +28,17 @@ Route::get('/posts/{post:slug}', [
     PageController::class, 'show'
 ])->name('post.show');
 
-Route::get('/categories/{category}', function (Category $category)
+Route::get('posts/categories/{category}', function (Category $category)
 {
     return view('posts', [
         'posts' => $category->posts
+    ]);
+});
+
+Route::get('posts/user/{user}', function (User $user)
+{
+    return view('posts', [
+        'posts' => $user->posts
     ]);
 });
 
