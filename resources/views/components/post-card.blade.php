@@ -14,7 +14,6 @@
                                        style="font-size: 10px">{{$post->category->name}}s</a>
                                     
                                 </div>
-
                                 <div class="mt-4">
                                     <h1 class="text-3xl">
                                     <a href="/posts/{{$post->slug}}">{{$post->header}}</a>

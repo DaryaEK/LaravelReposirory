@@ -24,7 +24,6 @@ class="{{$loop->iteration <3 ? 'col-span-3' : 'col-span-2'}}"/>
 <title>Статьи</title>
 </head>
 <body bgcolor="#E6E6FA">
-
 @foreach($posts as $post)
 <article>
 <p>{{$post->header}}</p>
