@@ -23,7 +23,7 @@
             </div>
         </nav>
 
-        <x-posts-header/>
+
 
         {{$slot}}
 
