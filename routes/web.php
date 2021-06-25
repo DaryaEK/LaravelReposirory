@@ -16,7 +16,6 @@ use App\Models\User;
 |
 */
 
-
 Route::get('/', [
     PageController::class, 'index'
 ])->name('post.main');
@@ -35,9 +34,11 @@ Route::get('posts/categories/{category}', function (Category $category)
 Route::get('posts/user/{user}', function (User $user)
 {
     return view('posts', [
-        'posts' => $user->posts
+        'posts' => $user->posts,
+        'currentCategory' => $category,
+        'categories' => Category::all()
     ]);
 });
 
- 
+
 
