@@ -24,10 +24,12 @@ Route::get('/posts/{post:slug}', [
     PageController::class, 'show'
 ])->name('post.show');
 
-Route::get('posts/categories/{category}', function (Category $category)
+Route::get('posts/categories/{category:slug}', function (Category $category)
 {
     return view('posts', [
-        'posts' => $category->posts
+        'posts' => $category->posts,
+        'currentCategory' => $category,
+        'categories' => Category::all()
     ]);
 });
 
@@ -35,10 +37,9 @@ Route::get('posts/user/{user}', function (User $user)
 {
     return view('posts', [
         'posts' => $user->posts,
-        'currentCategory' => $category,
-        'categories' => Category::all()
+        'currentAuthor' => $user
     ]);
 });
 
-
-
+Route::get('register', [RegisterController::class, 'create']);
+Route::post('register', [RegisterController::class, 'store']);
