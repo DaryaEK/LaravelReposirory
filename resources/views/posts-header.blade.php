@@ -1,5 +1,3 @@
-
-
 <header class="max-w-xl mx-auto mt-20 text-center">
     <h1 class="text-4xl">
         Latest <span class="text-blue-500">Laravel From Scratch</span> News
@@ -12,57 +10,56 @@
         <!--  Category -->
         <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl">
 
-   <x-dropdown>
-   <x-slot name = "trigger">
-                <button class="py-2 pl-3 pr-9 text-sm font-semibold w-full lg:w-32 text-left flex lg:inline-flex">
-                    {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Categories'}}
-                    <x-icon name="down-arrow" class="absolute pointer-events-none" style="right: 12px;"/>
+            <x-dropdown>
+                <x-slot name="trigger">
+                    <button class="py-2 pl-3 pr-9 text-sm font-semibold w-full lg:w-32 text-left flex lg:inline-flex">
+                        {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Categories'}}
+                        <x-icon name="down-arrow" class="absolute pointer-events-none" style="right: 12px;"/>
 
-                </button>
+                    </button>
                 </x-slot>
- 
+
                 <x-dropdown-item href="/?={{ http_build_query(request()->except('category', 'page')) }}"
-                                :active="request()->routeIs('post.main')">All</x-dropdown-item>
+                                 :active="request()->routeIs('post.main')">All
+                </x-dropdown-item>
 
-                        @foreach($categories as $category)
-                        <x-dropdown-item
+                @foreach($categories as $category)
+                    <x-dropdown-item
                         href="/posts/category={{ $category->slug }}&{{ http_build_query(request()->except('category', 'page')) }}"
-                                    :active='request()->is("posts/categories/{$category->slug}")'
+                        :active='request()->is("posts/categories/{$category->slug}")'
                     >{{ ucwords($category->name) }}
-                            </x-dropdown-item>
-        
-                        @endforeach
-                        </x-dropdown>
+                    </x-dropdown-item>
 
-            </div>
-            
-            <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl">
+                @endforeach
+            </x-dropdown>
+
+        </div>
+
+        <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl">
 
             <x-dropdown>
-    <x-slot name="trigger">
-        <button class="py-2 pl-3 pr-9 text-sm font-semibold w-32 text-left inline-flex">
+                <x-slot name="trigger">
+                    <button class="py-2 pl-3 pr-9 text-sm font-semibold w-32 text-left inline-flex">
 
-            {{ isset($currentCategory) ? $currentCategory->name : 'Authors' }}
+                        {{ isset($currentCategory) ? $currentCategory->name : 'Authors' }}
 
-            <x-icon name="down-arrow" class="absolute pointer-events-none" style="right: 12px;" />
-        </button>
+                        <x-icon name="down-arrow" class="absolute pointer-events-none" style="right: 12px;"/>
+                    </button>
 
-    </x-slot>
+                </x-slot>
 
-    <x-dropdown-item href="/"
-                    :active="request()->routeIs('post.main')">All
-</x-dropdown-item>
+                <x-dropdown-item href="/"
+                                 :active="request()->routeIs('post.main')">All
+                </x-dropdown-item>
 
+                @foreach($users as $user)
+                    <x-dropdown-item href="/posts/user/{{ $user->id }}"
+                                     :active='request()->is("posts/user/{{ $user->id }}")'
+                    >{{ ucwords($user->name) }}</x-dropdown-item>
 
-
-    @foreach($users as $user)
-    <x-dropdown-item href="/posts/user/{{ $user->id }}"
-                        :active='request()->is("posts/user/{{ $user->id }}")'
-        >{{ ucwords($user->name) }}</x-dropdown-item>
-
-    @endforeach
-    </x-dropdown>
-</div>
+                @endforeach
+            </x-dropdown>
+        </div>
 
 
         <!-- <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl">
