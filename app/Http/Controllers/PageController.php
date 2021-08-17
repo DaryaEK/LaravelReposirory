@@ -10,9 +10,10 @@ use App\Models\User;
 
 class PageController extends Controller
 {
-               
+
         public function index()
         {
+
             return view('posts', ['posts' => Post::with('category')->get(), 'categories' => Category::all(), 'users' => User::all()]);
         }
 

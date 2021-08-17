@@ -1,4 +1,4 @@
-{{--@props (['categories'])--}}
+<!-- {{--@props (['categories'])--}}
 
 {{--<div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl">--}}
 
@@ -30,4 +30,4 @@
 {{--            @endforeach--}}
 {{--        </div>--}}
 {{--   </div>--}}
-{{--</div>--}}
+{{--</div>--}} -->

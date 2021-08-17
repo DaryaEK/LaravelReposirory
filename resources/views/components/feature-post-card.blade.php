@@ -1,7 +1,8 @@
 @props(['post'])
 
 <article
-    class="transition-colors duration-300 hover:bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl">
+    class="transition-colors duration-300 dark:bg-gray-800 dark:hover:bg-gray-700  hover:bg-gray-100 border border-black border-opacity-0 hover:border-opacity-5 rounded-xl">
+
     <div class="py-6 px-5 lg:flex">
         <div class="flex-1 lg:mr-8">
             <img src="/images/illustration-1.png" alt="Blog Post illustration" class="rounded-xl">
@@ -10,7 +11,11 @@
         <div class="flex-1 flex flex-col justify-between">
             <header class="mt-8 lg:mt-0">
                 <div class="space-x-2">
-                    <a href="/posts/categories/{{ $post->category->slug }}"
+<!-- <<<<<<< HEAD
+                    <a href="/posts/categories/{{ $post->category->slug }}" -->
+=======
+                    <a href="/?category={{ $post->category->slug }}"
+>>>>>>> 34d49c4987ada88cd6ef57f5d6e8d4fa03da48a6
                        class="px-3 py-1 border border-blue-300 rounded-full text-blue-300 text-xs uppercase font-semibold"
                        style="font-size: 10px">{{ $post->category->name }}</a>
                 </div>
@@ -48,4 +53,6 @@
             </footer>
         </div>
     </div>
+
 </article>
+
