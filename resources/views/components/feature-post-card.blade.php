@@ -11,11 +11,7 @@
         <div class="flex-1 flex flex-col justify-between">
             <header class="mt-8 lg:mt-0">
                 <div class="space-x-2">
-<!-- <<<<<<< HEAD
-                    <a href="/posts/categories/{{ $post->category->slug }}" -->
-=======
                     <a href="/?category={{ $post->category->slug }}"
->>>>>>> 34d49c4987ada88cd6ef57f5d6e8d4fa03da48a6
                        class="px-3 py-1 border border-blue-300 rounded-full text-blue-300 text-xs uppercase font-semibold"
                        style="font-size: 10px">{{ $post->category->name }}</a>
                 </div>

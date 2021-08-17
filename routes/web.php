@@ -32,10 +32,7 @@ Route::get('/', [PageController::class, 'index'])->name('post.main');
 // })
 // ->name('post.main');
 
-
-Route::get('/posts/{post:slug}', [
-    PageController::class, 'show'
-])->name('post.show');
+Route::get('/posts/{post:slug}', [PageController::class, 'show'])->name('post.show');
 
 Route::get('/category/{category:slug}', function (Category $category)
 {
@@ -66,8 +63,7 @@ Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
 Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
 
 
-
-Route::get('/posts/create', [AdminPostController::class, 'create'])->middleware('auth');
+//Route::get('admin/posts/create', [AdminPostController::class, 'create']);
 Route::post('/posts', [AdminPostController::class, 'store'])->middleware('auth');
 
 Route::get('/posts/{post}/edit', [AdminPostController::class, 'edit'])->middleware('auth');
@@ -75,8 +71,8 @@ Route::patch('/posts/{post}', [AdminPostController::class, 'update'])->middlewar
 
 Route::delete('/posts/{post}', [AdminPostController::class, 'destroy'])->middleware('admin');
 
-// Route::middleware('can:admin')->group(function () {
-//     Route::resource('/posts', AdminPostController::class)->except('show');
-// });
+Route::middleware('can:admin')->group(function () {
+    Route::resource('admin/posts', AdminPostController::class)->except('show');
+});
 
 Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');

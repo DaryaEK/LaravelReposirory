@@ -28,16 +28,14 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Model::unguard();
-    
 
-//     Gate::define('admin', function (User $user) {
-//         return $user->name === 'General';
-//     });
+        Gate::define('admin', function (User $user) {
+            return $user->name === 'General';
+        });
 
-//     Blade::if('admin', function () {
-//         return request()->user()->can('admin');
-//     });
-// }
+        Blade::if('admin', function () {
+            return request()->user()->can('admin');
+        });
+    }
 
-}
 }

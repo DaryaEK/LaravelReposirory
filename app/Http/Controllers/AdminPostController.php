@@ -29,7 +29,7 @@ class AdminPostController extends Controller
         ]);
 
         $attributes['user_id'] = auth()->id();
-        
+
         Post::create($attributes);
 
         return redirect('/');
@@ -50,7 +50,7 @@ class AdminPostController extends Controller
             'category_id' => ['required', Rule::exists('categories', 'id')]
         ]);
 
-        
+
         $post->update($attributes);
 
         return back()->with('success', 'Post Updated!');
@@ -60,6 +60,6 @@ class AdminPostController extends Controller
     {
         $post->delete();
 
-        return back()->with('success', 'Post Deleted!');
+        return redirect('/');
     }
 }
