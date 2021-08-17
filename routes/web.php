@@ -2,8 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\AdminPostController;
+use App\Http\Controllers\registercontroller;
+use App\Http\Controllers\SessionsController;
+use App\Http\Controllers\PostCommentsController;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,20 +22,28 @@ use App\Models\User;
 |
 */
 
-Route::get('/', [
-    PageController::class, 'index'
-])->name('post.main');
+Route::get('/', [PageController::class, 'index'])->name('post.main');
+
+// Route::get('/', function () {
+//     return view('posts', [
+//         'posts' => Post::latest()->get(),
+//         'categories' => Category::all()
+//     ]);
+// })
+// ->name('post.main');
+
 
 Route::get('/posts/{post:slug}', [
     PageController::class, 'show'
 ])->name('post.show');
 
-Route::get('posts/categories/{category:slug}', function (Category $category)
+Route::get('/category/{category:slug}', function (Category $category)
 {
     return view('posts', [
         'posts' => $category->posts,
         'currentCategory' => $category,
-        'categories' => Category::all()
+        'categories' => Category::all(),
+        'users' => User::all()
     ]);
 });
 
@@ -37,9 +51,32 @@ Route::get('posts/user/{user}', function (User $user)
 {
     return view('posts', [
         'posts' => $user->posts,
-        'currentAuthor' => $user
+        'categories' => Category::all(),
+        'currentAuthor' => $user,
+        'users' => User::all()
     ]);
 });
 
-Route::get('register', [RegisterController::class, 'create']);
-Route::post('register', [RegisterController::class, 'store']);
+Route::post('posts/{post:slug}/comments', [PostCommentsController::class, 'store']);
+
+Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
+Route::post('register', [RegisterController::class, 'store'])->middleware('guest');
+
+Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
+Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
+
+
+
+Route::get('/posts/create', [AdminPostController::class, 'create'])->middleware('auth');
+Route::post('/posts', [AdminPostController::class, 'store'])->middleware('auth');
+
+Route::get('/posts/{post}/edit', [AdminPostController::class, 'edit'])->middleware('auth');
+Route::patch('/posts/{post}', [AdminPostController::class, 'update'])->middleware('auth');
+
+Route::delete('/posts/{post}', [AdminPostController::class, 'destroy'])->middleware('admin');
+
+// Route::middleware('can:admin')->group(function () {
+//     Route::resource('/posts', AdminPostController::class)->except('show');
+// });
+
+Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');

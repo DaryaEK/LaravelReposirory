@@ -23,7 +23,7 @@
 
 {{--        <div show="open" class="absolute mt-5 bg-gray-100 w-full rounded-xl max-h-60 overflow-x-hidden overflow-y-scroll">--}}
 {{--            @foreach($categories as $category)--}}
-{{--                <a href="/posts/category/{{ $category -> slug }}"--}}
+{{--                <a href="/category/{{ $category -> slug }}"--}}
 {{--                    class="flex bg-gray-100 hover:bg-gray-400 hover:text-white"--}}
 {{--                    focus:bg-gray-500 focus:text-white py-2 pl-3 pr-9 text-sm rounded-xl
 {{--                >{{ $category -> name }}</a>--}}
