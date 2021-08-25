@@ -77,6 +77,7 @@
                            style="font-size: 10px">{{ $post->category->name }}</a>
                     </div>
                 </div>
+            </div>
 
     <div class="s-content__media col-full">
                 <div class="s-content__post-thumb">
