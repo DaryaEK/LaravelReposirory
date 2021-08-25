@@ -7,13 +7,7 @@ use Illuminate\Validation\Rule;
 
 class AdminPostController extends Controller
 {
-    // public function index()
-    // {
-    //     return view('posts.main', [
-    //         'posts' => Post::paginate(50)
-    //     ]);
-    // }
-
+ 
     public function create()
     {
         return view('posts.create');
@@ -60,6 +54,6 @@ class AdminPostController extends Controller
     {
         $post->delete();
 
-        return back()->with('success', 'Post Deleted!');
+        return redirect('/')->with('success', 'Post Deleted!');
     }
 }

@@ -20,13 +20,18 @@ class DatabaseSeeder extends Seeder
         $user = User::factory()->create(['name' => 'Jhon Snow']);
         $user2 = User::factory()->create(['name' => 'Cthulhu Doe']);
         $user3 = User::factory()->create(['name' => 'Alsina Dimitresku']);
+        $user4 = User::factory()->create(['name' => 'Master']);
         $category = Category::factory()->create(['name' => 'War']);
         $category2 = Category::factory()->create(['name' => 'Magic']);
         $category3 = Category::factory()->create(['name' => 'Villages']);
 
         Post::factory(5)->create(['user_id' => $user->id, 'category_id' => $category->id]);
-        Post::factory(3)->create(['user_id' => $user2->id, 'category_id' => $category2->id]);
+        Post::factory(5)->create(['user_id' => $user2->id, 'category_id' => $category2->id]);
+        Post::factory(3)->create(['user_id' => $user2->id, 'category_id' => $category3->id]);
         Post::factory(6)->create(['user_id' => $user3->id, 'category_id' => $category3->id]);
+        Post::factory(3)->create(['user_id' => $user4->id, 'category_id' => $category->id]);
+        Post::factory(2)->create(['user_id' => $user4->id, 'category_id' => $category2->id]);
+        
     }
 }
 
