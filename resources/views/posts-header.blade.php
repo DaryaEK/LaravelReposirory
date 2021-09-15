@@ -9,51 +9,35 @@
                 </a>
             </div> <!-- end header__logo -->
 
-            <ul class="header__social">
-                <li>
-                    <a href="#0"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                    <a href="#0"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                </li>
-            </ul> <!-- end header__social -->
+            <div class="header__profile dropdowns">
+                <div class="mt-8 md:mt-0 flex items-center">
+                    @auth
+                        <li class="has-children">
+                            <a href="#0" title="">Welcome, {{ auth()->user()->name }}!</a>
+                            <ul class="sub-menu">
+                                <li><a href="/logout">Log Out</a></li>
+                                <li><a href="admin/posts/create">New Post</a></li>
+                            </ul>
+                        </li>
+                    @else
+                        <a href="/register" class="text-xs font-bold uppercase">Register</a>
+                        <a href="/login" class="ml-6 text-xs font-bold uppercase">Log In</a>
+                    @endauth
 
 
- <div class="mt-8 md:mt-0 flex items-center">
-        @auth
-              <span class="text-xs font-bold uppercase">Welcome, {{ auth()->user()->name }}!</span>
-
-                   <form method="POST" action="/logout" class="text-xs font-semibold text-blue-500 ml-6">
-
-                       @csrf
-<div>
-                       <button type="submit" class="submit btn btn--primary">Log Out</button>
-</div>
-<div>
-                 <button><a href="admin/posts/create">Publish New Post</a></button>
-</div>
-                   </form>
-               @else
-                    <a href="/register" class="text-xs font-bold uppercase">Register</a>
-                    <a href="/login" class="ml-6 text-xs font-bold uppercase">Log In</a>
-                @endauth
+                </div>
+            </div> <!-- end header__social -->
 
 
-            </div>
 
 
-            <div style="position: absolute; right: 0; top: 0" >
- 
+
+            <div class="top-search">
+
                 <form method="GET" action="#">
                     <input type="text"
                            name="search"
-                           placeholder="Find something"
+                           placeholder="Search"
                            class="bg-transparent placeholder-black font-semibold text-sm"
                            value="{{ request('search') }}"
                     >
@@ -68,9 +52,8 @@
         </div> <!-- header-content -->
     </header> <!-- header -->
     <div class="pageheader-content row">
-        <!-- <x-feature-post-card :posts="$posts" /> -->
+        <x-feature-post-card :posts="$posts->slice(0, 3)"/>
     </div> <!-- end pageheader-content row -->
-
 
 
 </section>

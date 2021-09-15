@@ -3,7 +3,7 @@
 
     <h2 class="header__nav-heading h6">Site Navigation</h2>
 
-    <ul class="header__nav">
+    <ul class="header__nav dropdowns">
         <x-menu-item class="current">
             <x-menu-links href="/">Home</x-menu-links>
         </x-menu-item>

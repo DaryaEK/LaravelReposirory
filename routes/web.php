@@ -68,4 +68,4 @@ Route::middleware('can:admin')->group(function () {
     Route::resource('/posts', AdminPostController::class)->except('show');
 });
 
-Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
+Route::get('logout', [SessionsController::class, 'destroy'])->middleware('auth');
