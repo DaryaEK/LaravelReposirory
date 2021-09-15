@@ -24,7 +24,32 @@
                 </li>
             </ul> <!-- end header__social -->
 
+
+ <div class="mt-8 md:mt-0 flex items-center">
+        @auth
+              <span class="text-xs font-bold uppercase">Welcome, {{ auth()->user()->name }}!</span>
+
+                   <form method="POST" action="/logout" class="text-xs font-semibold text-blue-500 ml-6">
+
+                       @csrf
+<div>
+                       <button type="submit" class="submit btn btn--primary">Log Out</button>
+</div>
+<div>
+                 <button><a href="admin/posts/create">Publish New Post</a></button>
+</div>
+                   </form>
+               @else
+                    <a href="/register" class="text-xs font-bold uppercase">Register</a>
+                    <a href="/login" class="ml-6 text-xs font-bold uppercase">Log In</a>
+                @endauth
+
+
+            </div>
+
+
             <div style="position: absolute; right: 0; top: 0" >
+ 
                 <form method="GET" action="#">
                     <input type="text"
                            name="search"
@@ -43,8 +68,10 @@
         </div> <!-- header-content -->
     </header> <!-- header -->
     <div class="pageheader-content row">
-        <x-feature-post-card :posts="$posts" />
+        <!-- <x-feature-post-card :posts="$posts" /> -->
     </div> <!-- end pageheader-content row -->
+
+
 
 </section>
 

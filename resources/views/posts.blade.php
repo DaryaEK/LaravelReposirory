@@ -4,6 +4,8 @@
 
     <section class="s-content" >
 
-    </section>
 
+
+    </section>
+    @include('post-footer')
 </x-layout>

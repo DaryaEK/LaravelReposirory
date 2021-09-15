@@ -1,7 +1,7 @@
 <x-layout>
     <section class="px-6 py-8">
-        <x-panel class="max-w-sm mx-auto">
-            <form method="POST" action="/posts">
+        <x-panel>      
+                  <form method="POST" action="/posts">
                 @csrf
 
                 <div class="mb-6">

@@ -14,7 +14,7 @@ class PageController extends Controller
         public function index()
         {
             return view('posts', [
-            'posts' => Post::latest()->filter(request(['search', 'category', 'author']))->paginate(5),
+            'posts' => Post::latest()->filter(request(['search', 'category', 'author'])),
             'categories' => Category::all(), 
             'users' => User::all(),
             'CurrentCategory' => Category::firstWhere('slug', request('category'))

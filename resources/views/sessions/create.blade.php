@@ -1,9 +1,10 @@
 <x-layout>
     <section class="px-6 py-8">
-        <main class="max-w-lg mx-auto mt-10 bg-gray-100 border border-gray-200 p-6 rounded-xl">
+        <main class="text-center font-bold ">
             <h1 class="text-center font-bold text-xl">Log In!</h1>
 
             <form method="POST" action="/login" class="mt-10">
+            
                 @csrf
 
                 <div class="mb-6">
@@ -13,7 +14,7 @@
                         Email
                     </label>
 
-                    <input class="border border-gray-400 p-2 w-full"
+                    <input class="full-width text-center"
                            type="email"
                            name="email"
                            id="email"
@@ -33,7 +34,7 @@
                         Password
                     </label>
 
-                    <input class="border border-gray-400 p-2 w-full"
+                    <input class="full-width text-center"
                            type="password"
                            name="password"
                            id="password"
@@ -45,12 +46,9 @@
                     @enderror
                 </div>
 
-                <div class="mb-6">
-                    <button type="submit"
-                            class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500"
-                    >
-                        Log In
-                    </button>
+                <div>
+                <button type="submit" class="submit btn btn--primary">Login</button>
+                </div>
                 </div>
             </form>
         </main>
