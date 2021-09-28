@@ -15,6 +15,7 @@ class PageController extends Controller
         {
             return view('posts', [
             'posts' => Post::latest()->orderBy('created_at', 'ASC')->filter(request(['search', 'category', 'author']))->get(),
+            'recentPost' => Post::latest()->limit(3)->get(),
             'categories' => Category::all(),
             'users' => User::all(),
             'CurrentCategory' => Category::firstWhere('slug', request('category'))

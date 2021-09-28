@@ -30,6 +30,7 @@ Route::get('/category/{category:slug}', function (Category $category)
 {
     return view('posts', [
         'posts' => $category->posts,
+        'recentPost' => $category->posts->sortByDesc('created_at')->take(3),
         'currentCategory' => $category,
         'categories' => Category::all(),
         'users' => User::all()

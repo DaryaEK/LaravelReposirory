@@ -1,7 +1,6 @@
 @props(['posts'])
 
 <div class="col-full">
-
     <div class="featured">
         <div class="featured__column featured__column--big">
             <x-feature-post-element :post="$posts[0]"/>
