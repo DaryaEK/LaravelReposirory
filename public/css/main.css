@@ -1853,6 +1853,97 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     width: 30%;
 }
 
+.register-form-container {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-form-container label, .register-form-container h1 {
+    color: white;
+}
+
+.register-form-container input[type="name"],
+.register-form-container input[type="email"],
+.register-form-container input[type="password"] {
+    border-bottom: 2px solid rgba(175, 166, 166, 0.5);
+    color: white;
+}
+
+.register-form-container input[type="name"]:focus,
+.register-form-container input[type="email"]:focus,
+.register-form-container input[type="password"]:focus {
+    border-bottom: 2px solid rgba(32, 102, 232, 0.5);
+}
+
+.register-form-container .register-form-block {
+    width: 30%;
+}
+
+.edit-form-container {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-form-container label, .edit-form-container h1 {
+    color: white;
+}
+
+.edit-form-container input[type="header"],
+.edit-form-container input[type="slug"],
+.edit-form-container input[type="body"],
+.edit-form-container input[type="category"] {
+    border-bottom: 2px solid rgba(175, 166, 166, 0.5);
+    color: white;
+}
+
+.edit-form-container input[type="header"]:focus,
+.edit-form-container input[type="slug"]:focus,
+.edit-form-container input[type="body"]:focus,
+.edit-form-container input[type="category"]:focus {
+    border-bottom: 2px solid rgba(32, 102, 232, 0.5);
+}
+
+.edit-form-container .edit-form-block {
+    width: 30%;
+}
+
+.create-form-container {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-form-container label, .create-form-container h1 {
+    color: white;
+}
+
+.create-form-container input[type="header"],
+.create-form-container input[type="slug"],
+.create-form-container input[type="body"],
+.create-form-container input[type="category"] {
+    border-bottom: 2px solid rgba(175, 166, 166, 0.5);
+    color: white;
+}
+
+.create-form-container input[type="header"]:focus,
+.create-form-container input[type="slug"]:focus,
+.create-form-container input[type="body"]:focus,
+.create-form-container input[type="category"]:focus {
+    border-bottom: 2px solid rgba(32, 102, 232, 0.5);
+}
+
+.create-form-container .create-form-block {
+    width: 30%;
+}
+
 .top-search{
     position: absolute;
     right: 0;
@@ -3757,6 +3848,7 @@ footer h4::after {
     margin-top: 10.2rem;
     padding-left: 9rem;
     position: relative;
+    
 }
 
 .s-content__author img {

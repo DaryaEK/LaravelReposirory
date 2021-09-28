@@ -1,4 +1,6 @@
 <x-layout>
+<main class="edit-form-container">
+<div class="edit-form-block">
     <x-setting :heading="'Edit Post: ' . $post->header">
 
         <form method="POST" action="/posts/{{ $post->id }}" enctype="multipart/form-data">
@@ -30,4 +32,7 @@
 
         </form>
     </x-setting>
+</div>
+</main>
+
 </x-layout>

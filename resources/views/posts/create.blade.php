@@ -1,6 +1,7 @@
 <x-layout>
-    <section class="px-6 py-8">
-        <x-panel>      
+<main class="create-form-container">
+<div class="create-form-block">
+
                   <form method="POST" action="/posts">
                 @csrf
 
@@ -11,7 +12,7 @@
                         Header
                     </label>
 
-                    <input class="border border-gray-400 p-2 w-full"
+                    <input class="border border-gray-400 "
                            type="text"
                            name="header"
                            id="header"
@@ -86,6 +87,7 @@
 
                 <x-submit-button>Publish</x-submit-button>
             </form>
-        </x-panel>
-    </section>
+</div>
+</main>
+  
 </x-layout>

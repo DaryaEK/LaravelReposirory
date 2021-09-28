@@ -1,6 +1,6 @@
 <x-layout>
-    <section class="px-6 py-8">
-        <main class="text-center font-bold">
+<main class="register-form-container">
+<div class="register-form-block">
             <h1 class="text-center font-bold text-xl">Register</h1>
             <form  method="POST" action="/register" class="mt-10">
 
@@ -24,7 +24,7 @@
                     >
 
                     @error('name')
-                        <p class="text-red-500 text-xs mt-1">{{ $message }}</pclass>
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -68,7 +68,7 @@
                     >
 
                     @error('password')
-                        <p class="text-red-500 text-xs mt-1">{{ $message }}</pclass>
+                        <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
                 </div>
 
@@ -85,7 +85,7 @@
                @endif
 
             </form>
+</div>
         </main>
-    </section>
 
 </x-layout>
