@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\registercontroller;
@@ -26,26 +28,9 @@ Route::get('/', [PageController::class, 'index'])->name('post.main');
 
 Route::get('/posts/{post:slug}', [PageController::class, 'show'])->name('post.show');
 
-Route::get('/category/{category:slug}', function (Category $category)
-{
-    return view('posts', [
-        'posts' => $category->posts,
-        'recentPost' => $category->posts->sortByDesc('created_at')->take(3),
-        'currentCategory' => $category,
-        'categories' => Category::all(),
-        'users' => User::all()
-    ]);
-});
+Route::get('/category/{category:slug}', [CategoryController::class, 'index']);
 
-Route::get('/user/{user:name}', function (User $user)
-{
-    return view('posts', [
-        'posts' => $user->posts,
-        'categories' => Category::all(),
-        'currentAuthor' => $user,
-        'users' => User::all()
-    ]);
-});
+Route::get('/user/{user:name}', [UserController::class, 'index']);
 
 Route::post('posts/{post:slug}/comments', [PostCommentsController::class, 'store']);
 

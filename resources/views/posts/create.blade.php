@@ -1,7 +1,7 @@
 <x-layout>
 <main class="create-form-container">
 <div class="create-form-block">
-
+<h1 class="text-center font-bold">Create a new post</h1>
                   <form method="POST" action="/posts">
                 @csrf
 
@@ -53,7 +53,7 @@
                         Body
                     </label>
 
-                    <textarea class="border border-gray-400 p-2 w-full"
+                    <textarea class="border border-gray-400 "
                            name="body"
                            id="body"
                            required

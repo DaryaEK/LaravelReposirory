@@ -95,7 +95,7 @@
             <!-- <img src="https://i.pravatar.cc/60?u={{ auth()->id() }}" alt="" width="40" height="40" class="rounded-full"> -->
                 <h4 class="s-content__author-name">
                     <a href="/user/{{$post->user->name}}" {{$post->user->name}}
-                    class="px-3 py-1 border border-black-300 rounded-full text-black-300 text-xs uppercase font-semibold"
+                    class="px-3 py-1 border border-black-300 rounded-full text-black-300 text-xs uppercase font-semibold "
                     > Written by {{ $post->user->name }} </a>
                 </h4>
 
@@ -107,11 +107,12 @@
 
             <div class="dropdowns">
 
-                <li class="has-children"><h1> More... </h1>
+                <li class="has-children">
+                   <button type="submit" class="submit btn btn--primary text-align: left"> More... </button>
                     <ul class="sub-menu">
                         <li><a href="/posts/{{ $post->id }}/edit">Edit</a></li>
                         <li>
-                            <button type="submit" class="submit btn btn--primary">Delete</button>
+                            Delete
                         </li>
                     </ul>
                 </li>

@@ -6,7 +6,6 @@
             @csrf
 
             <header>
-                <!-- <img src="https://i.pravatar.cc/60?u={{ auth()->id() }}" alt="" width="40" height="40" class="rounded-full"> -->
 
                 <h2> Want to participate? </h2>
             </header>
