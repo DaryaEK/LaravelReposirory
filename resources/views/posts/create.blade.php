@@ -2,7 +2,7 @@
 <main class="create-form-container">
 <div class="create-form-block">
 <h1 class="text-center font-bold">Create a new post</h1>
-                  <form method="POST" action="/posts">
+                  <form method="POST" action="/posts" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-6">
@@ -45,7 +45,7 @@
                     @enderror
                 </div>
 
-               
+
                 <div class="mb-6">
                     <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
                            for="body"
@@ -83,11 +83,15 @@
                     @error('category')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
+
+
                 </div>
+
+              <input type="file" name="image">
 
                 <x-submit-button>Publish</x-submit-button>
             </form>
 </div>
 </main>
-  
+
 </x-layout>

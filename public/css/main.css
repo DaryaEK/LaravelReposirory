@@ -128,9 +128,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-    margin-top: 1rem;
-    margin-bottom: 1.8rem; 
- }  
+    margin-top: 6rem;
+    margin-bottom: 1.8rem;
+}
 
 @media only screen and (max-width: 600px) {
     h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
@@ -208,7 +208,7 @@ p.lead {
     font-family: "metropolis-medium", sans-serif;
     font-size: 2rem;
     line-height: 1.8;
-    margin-bottom: 2rem;
+    margin-bottom: 3.6rem;
     color: #000000;
 }
 
@@ -481,7 +481,6 @@ th:last-child, td:last-child {
  * ------------------------------------------------------------------- */
 button, .btn {
     margin-bottom: 1.2rem;
-    
 }
 
 fieldset {
@@ -502,7 +501,7 @@ dl,
 form,
 .video-container,
 .cl-custom-select {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -653,16 +652,17 @@ input[type="url"],
 input[type="password"],
 textarea,
 select {
+    display: block;
     height: 6rem;
     padding: 1.5rem 0;
-    border: 1;
+    border: 0;
     outline: none;
     color: #151515;
     font-family: "metropolis-regular", sans-serif;
     font-size: 1.6rem;
     line-height: 3rem;
-    width: 100%;
     max-width: 100%;
+    background: transparent;
     border-bottom: 2px solid rgba(0, 0, 0, 0.5);
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
@@ -1827,7 +1827,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .login-form-container {
-    color: black;
+    color: white;
     text-align: center;
     display: flex;
     align-items: center;
@@ -1841,7 +1841,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .login-form-container input[type="email"],
 .login-form-container input[type="password"] {
     border-bottom: 2px solid rgba(175, 166, 166, 0.5);
-    color: black;
+    color: white;
 }
 
 .login-form-container input[type="email"]:focus,
@@ -1854,7 +1854,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .register-form-container {
-    color: black;
+    color: white;
     text-align: center;
     display: flex;
     align-items: center;
@@ -1869,7 +1869,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .register-form-container input[type="email"],
 .register-form-container input[type="password"] {
     border-bottom: 2px solid rgba(175, 166, 166, 0.5);
-    color: black;
+    color: white;
 }
 
 .register-form-container input[type="name"]:focus,
@@ -1883,7 +1883,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .edit-form-container {
-    color: black;
+    color: white;
     text-align: center;
     display: flex;
     align-items: center;
@@ -1899,7 +1899,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .edit-form-container input[type="body"],
 .edit-form-container input[type="category"] {
     border-bottom: 2px solid rgba(175, 166, 166, 0.5);
-    color: black;
+    color: white;
 }
 
 .edit-form-container input[type="header"]:focus,
@@ -1910,17 +1910,28 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .edit-form-container .edit-form-block {
+    width: 60%;
+}
+
+.edit-form-container form textarea{
+    width: 100%;
+    background: white;
+    padding: 3rem;
+}
+.edit-form-container form select{
     width: 30%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .create-form-container {
-    color: black;
+    color: white;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 }
 
 .create-form-container label, .create-form-container h1 {
@@ -1932,7 +1943,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .create-form-container input[type="body"],
 .create-form-container input[type="category"] {
     border-bottom: 2px solid rgba(175, 166, 166, 0.5);
-    color: black;
+    color: white;
 }
 
 .create-form-container input[type="header"]:focus,
@@ -1945,6 +1956,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .create-form-container .create-form-block {
     width: 30%;
 }
+
 
 .top-search{
     position: absolute;
@@ -3752,7 +3764,7 @@ footer h4::after {
  * ## content main
  * ------------------------------------------------------------------- */
 .s-content__main {
-    margin-top: 2rem;
+    margin-top: 6rem;
     padding-left: 6rem;
     padding-right: 6rem;
 }
@@ -3768,7 +3780,7 @@ footer h4::after {
  * ------------------------------------------------------------------- */
 .s-content__media {
     padding: 0;
-    margin-top: 1rem;
+    margin-top: 4.8rem;
 }
 
 .s-content__media img {
@@ -3850,7 +3862,7 @@ footer h4::after {
     margin-top: 10.2rem;
     padding-left: 9rem;
     position: relative;
-    
+
 }
 
 .s-content__author img {
@@ -3873,7 +3885,6 @@ footer h4::after {
 
 .s-content__author-name a {
     color: #151515;
-    
 }
 
 .s-content__author-social {

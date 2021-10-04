@@ -19,7 +19,7 @@
             <h3 class="text-center">No Post here</h3>
         @endif
 
-                         
+
                 <nav class="pgn">
                         {{$posts->links()}}
                 </nav>
