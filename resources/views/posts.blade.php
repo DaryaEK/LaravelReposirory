@@ -20,9 +20,7 @@
         @endif
 
                          
-                <nav class="pgn">
-                        {{$posts->links()}}
-                </nav>
+
 
     </section>
     @include('post-footer')
