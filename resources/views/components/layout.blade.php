@@ -13,14 +13,14 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/vendor.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{asset('/css/base.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/vendor.css')}}">
+    <link rel="stylesheet" href="{{asset('/css/main.css')}}">
 
     <!-- script
     ================================================== -->
-    <script src="/js/modernizr.js"></script>
-    <script src="/js/pace.min.js"></script>
+    <script src="{{asset('/js/modernizr.js')}}"></script>
+    <script src="{{asset('/js/pace.min.js')}}"></script>
 
     <!-- favicons
     ================================================== -->

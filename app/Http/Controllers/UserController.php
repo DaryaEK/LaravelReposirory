@@ -14,7 +14,7 @@ class UserController extends Controller
         public function index(User $user)
         {
             return view('posts', [
-                'posts' => $user->posts,
+                'posts' => $user->posts()->paginate(8),
                 'recentPost' => $user->posts->sortByDesc('created_at')->take(3),
                 'categories' => Category::all(),
                 'currentAuthor' => $user,

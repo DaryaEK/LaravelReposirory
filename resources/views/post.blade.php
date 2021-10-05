@@ -1,35 +1,4 @@
 <x-layout>
-    <html class="no-js" lang="en">
-    <head>
-        <!--- basic page needs
-        ================================================== -->
-        <meta charset="utf-8">
-        <title>Standard Post Format</title>
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <!-- mobile specific metas
-        ================================================== -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-        <!-- CSS
-        ================================================== -->
-        <link rel="stylesheet" href="/css/base.css">
-        <link rel="stylesheet" href="/css/vendor.css">
-        <link rel="stylesheet" href="/css/main.css">
-
-        <!-- script
-        ================================================== -->
-        <script src="/js/modernizr.js"></script>
-        <script src="/js/pace.min.js"></script>
-
-        <!-- favicons
-        ================================================== -->
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    </head>
-
     <body id="top">
     <div class="s-pageheader">
         <header class="header">
@@ -77,11 +46,7 @@
 
             <div class="s-content__media col-full">
                 <div class="s-content__post-thumb">
-                    <img src="/images/thumbs/single/standard/standard-1000.jpg"
-                         srcset="/images/thumbs/single/standard/standard-2000.jpg 2000w,
-                                 /images/thumbs/single/standard/standard-1000.jpg 1000w,
-                                 /images/thumbs/single/standard/standard-500.jpg 500w"
-                         sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                    <img src="{{asset('/storage/images/'.$post->image)}}" alt="">
                 </div>
             </div> <!-- end s-content__media -->
 
@@ -158,17 +123,8 @@
         </div>
     </div>
 
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/plugins.js"></script>
-    <script src="/js/main.js"></script>
-
     </body>
     @include('post-footer')
-    </html>
-
 
 </x-layout>
 

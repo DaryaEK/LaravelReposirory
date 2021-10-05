@@ -14,7 +14,7 @@ class PageController extends Controller
         public function index()
         {
             return view('posts', [
-            'posts' => Post::latest()->orderBy('created_at', 'ASC')->filter(request(['search', 'category', 'author']))->simplePaginate(8),
+            'posts' => Post::latest()->orderBy('created_at', 'ASC')->filter(request(['search', 'category', 'author']))->paginate(8),
             'recentPost' => Post::latest()->limit(3)->get(),
             'categories' => Category::all(),
             'users' => User::all(),
