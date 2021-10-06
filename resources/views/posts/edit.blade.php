@@ -27,7 +27,7 @@
 
                 <x-form.error name="category"/>
 
-
+                
             <x-submit-button>Update</x-submit-button>
 
         </form>

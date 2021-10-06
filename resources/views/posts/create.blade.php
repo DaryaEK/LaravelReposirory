@@ -12,13 +12,13 @@
                         Header
                     </label>
 
-                    <input class="border border-gray-400 "
+                    <textarea class="border border-gray-400 "
                            type="text"
                            name="header"
                            id="header"
                            value="{{ old('header') }}"
                            required
-                    >
+                    ></textarea>
 
                     @error('header')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
@@ -32,13 +32,13 @@
                         Slug
                     </label>
 
-                    <input class="border border-gray-400 p-2 w-full"
+                    <textarea class="border border-gray-400 p-2 w-full"
                            type="text"
                            name="slug"
                            id="slug"
                            value="{{ old('slug') }}"
                            required
-                    >
+                    ></textarea>
 
                     @error('slug')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
@@ -86,9 +86,9 @@
 
 
                 </div>
-
+<div>
               <input type="file" name="image">
-
+</div>
                 <x-submit-button>Publish</x-submit-button>
             </form>
 </div>

@@ -48,7 +48,7 @@ Route::post('/posts', [AdminPostController::class, 'store'])->middleware('auth')
 Route::get('/posts/{post}/edit', [AdminPostController::class, 'edit'])->middleware('auth');
 Route::patch('/posts/{post}', [AdminPostController::class, 'update'])->middleware('auth');
 
-// Route::delete('/posts/{post}', [AdminPostController::class, 'destroy'])->middleware('admin');
+// Route::delete('delete', [AdminPostController::class, 'destroy'])->middleware('admin');
 
 Route::middleware('can:admin')->group(function () {
     Route::resource('/posts', AdminPostController::class)->except('show');

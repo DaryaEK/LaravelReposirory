@@ -502,6 +502,7 @@ form,
 .video-container,
 .cl-custom-select {
     margin-bottom: 3rem;
+    margin-top: 3rem;
 }
 
 
@@ -859,7 +860,12 @@ input[type="button"].btn--primary {
     background: #000000;
     border-color: #000000;
     color: #FFFFFF;
+    
+
 }
+
+
+
 
 .btn.btn--primary:hover,
 button.btn--primary:hover,
@@ -1826,6 +1832,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-right: 2rem;
 }
 
+
 .login-form-container {
     color: white;
     text-align: center;
@@ -1941,7 +1948,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .create-form-container input[type="header"],
 .create-form-container input[type="slug"],
 .create-form-container input[type="body"],
-.create-form-container input[type="category"] {
+.create-form-container input[type="category"]
+ {
     border-bottom: 2px solid rgba(175, 166, 166, 0.5);
     color: white;
 }
@@ -1954,9 +1962,49 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .create-form-container .create-form-block {
-    width: 30%;
+    width: 60%;
 }
 
+.create-form-container form textarea{
+    width: 100%;
+
+    background: white;
+    padding: 3rem;
+}
+.create-form-container form select{
+    width: 30%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+#okno {
+    width: 300px;
+    height: 150px;
+    text-align: center;
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 10px;
+    color: #000000;
+    display: none;
+    margin-bottom: 2%;
+   
+  }
+  #okno:target {display: block;}
+  .close {
+    display: inline-block;
+    border: 1px solid #000000;
+    color: #000000;
+    padding: 0 12px;
+    margin: 5px;
+    text-decoration: none;
+    background: #f2f2f2;
+    font-size: 14pt;
+    cursor:pointer;
+  }
+  .close:hover {background: #e6e6ff;}
 
 .top-search{
     position: absolute;
@@ -2324,6 +2372,7 @@ body.search-is-visible {
 
 .dropdowns li.has-children {
     padding-right: 3.3rem;
+    
 }
 
 .dropdowns li a {
@@ -3881,6 +3930,7 @@ footer h4::after {
 
 .s-content__author-name {
     margin-top: 0;
+    margin-left: 70%;
 }
 
 .s-content__author-name a {
