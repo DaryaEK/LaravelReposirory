@@ -14,8 +14,8 @@ class CategoryController extends Controller
         public function index(Category $category)
         {
             return view('posts', [
-                'posts' => $category->posts,
-                'recentPost' => $category->posts->sortByDesc('created_at')->take(3),
+                'posts' => $category->posts()->paginate(8),
+                'recentPost' => $category->posts->sortByDesc('created_at')->take(3)->values(),
                 'currentCategory' => $category,
                 'categories' => Category::all(),
                 'users' => User::all()

@@ -15,7 +15,7 @@ class UserController extends Controller
         {
             return view('posts', [
                 'posts' => $user->posts()->paginate(8),
-                'recentPost' => $user->posts->sortByDesc('created_at')->take(3),
+                'recentPost' => $user->posts->sortByDesc('created_at')->take(3)->values(),
                 'categories' => Category::all(),
                 'currentAuthor' => $user,
                 'users' => User::all()

@@ -5,8 +5,8 @@
 
     <div class="entry__thumb">
         <a href="/posts/{{$post->slug}}" class="entry__thumb-link">
-            <img src="{{asset('/storage/images/'.$post->image)}}"
-                 srcset="{{asset('/storage/images/'.$post->image)}} 1x, {{asset('/storage/images/'.$post->image)}} 2x"
+            <img src="{{asset('storage/image/'.$post->image)}}"
+                 srcset="{{asset('storage/image/'.$post->image)}} 1x, {{asset('storage/image/'.$post->image)}} 2x"
                  alt="">
         </a>
     </div>

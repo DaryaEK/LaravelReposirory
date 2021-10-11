@@ -64,22 +64,22 @@
                 </h4>
 
             </div>
-            
+
 
             @admin
             <div id="okno">
-            
+
                         <div><a href="/posts/{{ $post->id }}/edit">Edit</a></div>
-                        
-                      <div>  <a href="">Delete</a></div>
-                        
-                    
+
+                      <div>  <a href="/posts/{{ $post->id }}/delete">Delete</a></div>
+
+
       <a href="#" class="close">Close</a>
     </div>
 
-    <button type="button" class="submit btn btn--primary"><a href="#okno">More</a></button> 
-                   
-            </div> -->
+    <button type="button" class="submit btn btn--primary"><a href="#okno">More</a></button>
+
+            </div>
         <!-- <div class="s-content__header col-full">
                     <button type="submit" class="submit btn btn--primary"><a href="/posts/{{ $post->id }}/edit">Edit</button></a></div>
 

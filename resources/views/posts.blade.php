@@ -21,7 +21,7 @@
 
         <nav class="pgn">
                         {{$posts->links()}}
-                </nav>           
+                </nav>
 
 
     </section>

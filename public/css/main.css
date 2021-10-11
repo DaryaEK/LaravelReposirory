@@ -860,7 +860,7 @@ input[type="button"].btn--primary {
     background: #000000;
     border-color: #000000;
     color: #FFFFFF;
-    
+
 
 }
 
@@ -1459,6 +1459,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     vertical-align: bottom;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    width: 100%;
 }
 
 .masonry .entry__thumb-link::before {
@@ -1990,7 +1991,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: #000000;
     display: none;
     margin-bottom: 2%;
-   
+
   }
   #okno:target {display: block;}
   .close {
@@ -2372,7 +2373,7 @@ body.search-is-visible {
 
 .dropdowns li.has-children {
     padding-right: 3.3rem;
-    
+
 }
 
 .dropdowns li a {
