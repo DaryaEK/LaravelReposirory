@@ -1,5 +1,5 @@
 @props(['post'])
-<div class="entry" style="background-image:url('{{asset('/storage/images/'.$post->image)}}');">
+<div class="entry" style="background-image:url('{{asset('storage/image/'.$post->image)}}');">
 
     <div class="entry__content">
         <span class="entry__category"><a href="/category/{{$post->category->slug}}">{{$post->category->name}}</a></span>

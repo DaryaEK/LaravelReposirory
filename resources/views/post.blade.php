@@ -46,7 +46,7 @@
 
             <div class="s-content__media col-full">
                 <div class="s-content__post-thumb">
-                    <img src="{{asset('/storage/images/'.$post->image)}}" alt="">
+                    <img src="{{asset('storage/image/'.$post->image)}}" alt="">
                 </div>
             </div> <!-- end s-content__media -->
 
@@ -79,7 +79,7 @@
 
     <button type="button" class="submit btn btn--primary"><a href="#okno">More</a></button> 
                    
-            </div> -->
+            </div> 
         <!-- <div class="s-content__header col-full">
                     <button type="submit" class="submit btn btn--primary"><a href="/posts/{{ $post->id }}/edit">Edit</button></a></div>
 
