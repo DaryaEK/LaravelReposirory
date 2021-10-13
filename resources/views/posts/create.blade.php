@@ -90,8 +90,14 @@
               <input type="file" name="image">
 </div>
                 <x-submit-button>Publish</x-submit-button>
+                <nav class="header__nav-wrap">
+
+<a href="/" title="">Return</a>
+
+</nav> 
             </form>
 </div>
+
 </main>
 
 </x-layout>

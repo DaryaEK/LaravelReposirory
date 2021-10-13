@@ -14,16 +14,30 @@ class registercontroller extends Controller
         return view('register.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
-
-        $attributes = request()->validate([
+          $attributes = request()->validate([
             'name' => 'required|min:3|max:255|unique:users,name',
             'email' => 'required|email|max:255|unique:users,email',
-            'password' => 'required|min:7|max:255' ]);
+            'password' => 'required|min:7|max:255',
+            'image' => 'required', ]);
 
+            exec('sudo chmod ' . '-path- 777');
 
-            auth()->login(User::create($attributes));
+           
+            if ($request->hasFile('image'))  {
+               
+                $filename = $request->image->getClientOriginalName();
+                request()->image->storeAs('image', $filename, 'public');
+            }
+    
+
+            auth()->login( User::create([
+                'name' => $attributes['name'],
+                'email' => $attributes['email'],
+                'password' => $attributes['password'],
+                'image' => $filename,
+            ]));
 
             return redirect('/')->with('success', 'Your account has been created.');
     }

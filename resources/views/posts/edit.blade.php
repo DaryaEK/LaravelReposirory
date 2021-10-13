@@ -29,7 +29,11 @@
 
                 
             <x-submit-button>Update</x-submit-button>
+            <nav class="header__nav-wrap">
 
+<a href="/" title="">Return</a>
+
+</nav> 
         </form>
     </x-setting>
 </div>

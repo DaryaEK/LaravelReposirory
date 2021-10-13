@@ -1,11 +1,13 @@
 <x-layout>
 <main class="register-form-container">
 <div class="register-form-block">
+
             <h1 class="text-center font-bold text-xl">Register</h1>
-            <form  method="POST" action="/register" class="mt-10">
+            <form enctype="multipart/form-data" method="POST" action="/register" class="mt-10">
 
                 @csrf
 
+                
                 <div class="mb-6">
                     <label class="block mb-2 uppercase font-bold text-xs text-gray-700 "
                            for="name"
@@ -71,7 +73,9 @@
                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                     @enderror
                 </div>
-
+                <div>
+              <input type="file" name="image">
+</div>
                 <div>
                 <button type="submit" class="submit btn btn--primary">Submit</button>
                 </div>
@@ -83,7 +87,11 @@
                         @endforeach
                     </ul>
                @endif
+               <nav class="header__nav-wrap">
 
+<a href="/" title="">Return</a>
+
+</nav> <!-- end header__nav-wrap -->
             </form>
 </div>
         </main>

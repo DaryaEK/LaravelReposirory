@@ -8,7 +8,7 @@
 
         <div class="entry__info">
             <a href="#0" class="entry__profile-pic">
-                <img class="avatar" src="images/avatars/user-03.jpg" alt="">
+                <img class="avatar" src="{{asset('storage/image/'.$post->user->image)}}" alt="">
             </a>
 
             <ul class="entry__meta">

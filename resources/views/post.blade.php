@@ -64,35 +64,21 @@
                 </h4>
 
             </div>
-            
+
 
             @admin
-            <div id="okno">
-            
-                        <div><a href="/posts/{{ $post->id }}/edit">Edit</a></div>
-                        
-                      <div>  <a href="">Delete</a></div>
-                        
-                    
-      <a href="#" class="close">Close</a>
-    </div>
+            <div class="more dropdowns">
 
-    <button type="button" class="submit btn btn--primary"><a href="#okno">More</a></button> 
-                   
-            </div> 
-        <!-- <div class="s-content__header col-full">
-                    <button type="submit" class="submit btn btn--primary"><a href="/posts/{{ $post->id }}/edit">Edit</button></a></div>
-
-                    <div class="s-content__header col-full">
-                        <form method="POST" action="/posts/{{ $post->id }}">
-
-                        @csrf
-
-        @method('DELETE')
-
-            <button type="submit" class="submit btn btn--primary">Delete</button>
-        </form>
-    </div> -->
+    <li >  <p class="more-class"> More... </p>
+                <ul class="sub-menu">
+                <li><a href="/posts/{{ $post->id }}/edit">Edit</a></li>
+                                <li>
+                                <a href="/posts/{{ $post->id }}/delete">Delete</a>
+                                </li>
+                            </ul>
+                        </li>
+</div>
+          
             @endadmin
 
 

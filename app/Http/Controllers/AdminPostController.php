@@ -39,6 +39,9 @@ class AdminPostController extends Controller
             'user_id' => auth()->id()
         ]);
 
+      
+
+
         return redirect('/');
     }
 

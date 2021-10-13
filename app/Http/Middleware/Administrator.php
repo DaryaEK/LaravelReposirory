@@ -17,10 +17,12 @@ class Administrator
      */
     public function handle(Request $request, Closure $next)
     {
+        
         if (auth()->user()->name !== 'General') {
             abort(Response::HTTP_FORBIDDEN);
         }
 
         return $next($request);
+        
     }
 }
