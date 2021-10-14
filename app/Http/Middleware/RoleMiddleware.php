@@ -4,9 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpFoundation\Response;
 
-class Administrator
+class RoleMiddleware
 {
     /**
      * Handle an incoming request.
@@ -17,12 +16,13 @@ class Administrator
      */
     public function handle(Request $request, Closure $next)
     {
+        if(!auth()->user()->hasRole($role)) {
+            abort(404);
+        }
+        if($permission !== null && !auth()->user()->can($permission)) {
+            abort(404);
+        }
         
-        // if (auth()->user()->name !== 'General') {
-        //     abort(Response::HTTP_FORBIDDEN);
-        // }
-
         return $next($request);
-        
     }
 }

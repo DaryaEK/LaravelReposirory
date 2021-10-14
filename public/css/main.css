@@ -501,7 +501,7 @@ dl,
 form,
 .video-container,
 .cl-custom-select {
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     
 }
 
@@ -1809,9 +1809,9 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .more.dropdowns li ul{
     
-    top: 55px;
-    left: 20px;
-    font-size: 15px;
+    top: 78px;
+    left: 83px;
+    font-size: 17px;
     
    
 }
@@ -2362,7 +2362,7 @@ body.search-is-visible {
 
 .more-class{
    
-    
+    margin-left: 6rem;
     font-size: 2.4rem;
    width: 140%;
    font-family: "metropolis-medium", sans-serif;
@@ -3784,7 +3784,7 @@ footer h4::after {
 .s-content__header-meta {
     list-style: none;
     margin-left: 0;
-    margin-bottom: 1.2rem;
+    
     font-family: "metropolis-medium", sans-serif;
     font-size: 1.5rem;
     line-height: 1.8;
@@ -3814,7 +3814,7 @@ footer h4::after {
  * ## content main
  * ------------------------------------------------------------------- */
 .s-content__main {
-    margin-top: 6rem;
+    margin-top: 1rem;
     padding-left: 6rem;
     padding-right: 6rem;
 }
@@ -3829,7 +3829,7 @@ footer h4::after {
  * ## content media
  * ------------------------------------------------------------------- */
 .s-content__media {
-    padding: 0;
+    padding-left: 50px;
     
 }
 

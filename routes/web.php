@@ -54,4 +54,10 @@ Route::get('/posts/{post}/delete', [AdminPostController::class, 'destroy'])->mid
 //     Route::resource('/posts', AdminPostController::class)->except('show');
 // });
 
+Route::group(['middleware' => 'role:autor'], function() {
+    Route::get('/posts', function() {
+       return 'Добро пожаловать';
+    });
+});
+
 Route::get('logout', [SessionsController::class, 'destroy'])->middleware('auth');

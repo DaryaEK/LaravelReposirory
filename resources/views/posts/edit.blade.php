@@ -26,8 +26,7 @@
                 </select>
 
                 <x-form.error name="category"/>
-
-                
+              
             <x-submit-button>Update</x-submit-button>
             <nav class="header__nav-wrap">
 
