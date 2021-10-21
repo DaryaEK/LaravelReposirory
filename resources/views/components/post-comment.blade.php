@@ -3,22 +3,24 @@
 <article >
     
     
-    
-
-    <div>
+    <div class="comments-wrap">
+    <div class="comment__content">
         
-        <header class="mb-4">
             <!-- <img src="https://i.pravatar.cc/60?u={{ $comment->id }}" alt="" width="60" height="60" class="rounded-xl"> -->
-        <h3 class="font-bold">{{ $comment->user->name }}</h3>
+            <div class="comment__info">
+            <cite>{{ $comment->user->name }}</cite>
 
-            <p class="text-xs">
+            <div class="comment__meta">
                 Posted
-                <time>{{ $comment->created_at }}</time>
-            </p>
-        </header>
+                <time class="comment__time">{{ $comment->created_at }}</time>
+</div>
+</div>
 
-        <p>
-        {{ $comment->body }}
-        </p>
+
+        <div class="comment__text">
+       <p> {{ $comment->body }}</p>
+</div>
     </div>
+    </div>
+
 </article>

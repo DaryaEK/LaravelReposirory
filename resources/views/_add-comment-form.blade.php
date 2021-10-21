@@ -7,16 +7,16 @@
 
             <header>
 
-                <h2> Want to participate? </h2>
+                <h2 style="margin: 40px 30px 30px"> Want to participate? </h2>
             </header>
 
-            <div class="mt-6">
+            <div>
                 <textarea
                     name="body"
                     class="full-width"
                     rows="5"
                     placeholder="Quick, thing of something to say!"
-                    required style = "margin: 0px 0px 30px; width: 871px; height: 260px;"></textarea>
+                    required style = "margin: 0px 30px 30px; width: 871px; height: 200px; background-color: #e9e9e9;"></textarea>
 
                 @error('body')
                     <span class="text-xs text-red-500">{{ $message }}</span>
@@ -25,7 +25,7 @@
             </div>
 
             <div class="flex justify-end mt-6 pt-6 border-t border-gray-200">
-            <x-submit-button>Post</x-submit-button>
+            <button style="margin: 10px 30px 30px">Post</button>
             </div>
 
         </form>

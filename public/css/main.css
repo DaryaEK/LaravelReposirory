@@ -4183,9 +4183,9 @@ footer h4::after {
  * ## comments
  * ------------------------------------------------------------------- */
 .comments-wrap {
-    background-color: #e5e5e5;
-    padding: 8.4rem 0 9rem;
-    margin-top: 10.2rem;
+    background-color: #dadada;
+    padding: 20px;
+    
 }
 
 /* comments
@@ -4194,7 +4194,7 @@ footer h4::after {
     padding-top: 1.2rem;
     padding-bottom: 1.2rem;
     max-width: 880px;
-    color: #4c4c4c;
+    color: #ffffff;
 }
 
 #comments h3 {

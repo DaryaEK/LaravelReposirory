@@ -82,7 +82,7 @@
             @endadmin
 
 
-            <section class="col-span-12 mt-10 space-y-6">
+            <section >
                 @include ('_add-comment-form')
 
                 @foreach ($post->comments as $comment)
