@@ -6,7 +6,7 @@
             @if(!empty($posts[0]))
                 <x-feature-post-element :post="$posts[0]"/>
             @endif
-        </div> <!-- end featured__big -->
+        </div> 
 
         <div class="featured__column featured__column--small">
             @if(!empty($posts[1]))
@@ -15,7 +15,7 @@
             @if(!empty($posts[2]))
                 <x-feature-post-element :post="$posts[2]"/>
             @endif
-        </div> <!-- end featured__small -->
-    </div> <!-- end featured -->
+        </div>
+    </div> 
 
-</div> <!-- end col-full -->
+</div>

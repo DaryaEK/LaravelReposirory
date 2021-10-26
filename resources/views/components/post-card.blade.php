@@ -34,4 +34,4 @@
     </div>
 
 
-</article> <!-- end article -->
+</article> 

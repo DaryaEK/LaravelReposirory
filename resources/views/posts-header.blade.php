@@ -5,9 +5,9 @@
 
             <div class="header__logo">
                 <a class="logo">
-                    <img src="/images/logo.svg" alt="Homepage">
+                    <img src="/images/logogen.png" alt="Homepage">
                 </a>
-            </div> <!-- end header__logo -->
+            </div> 
 
             <div class="header__profile dropdowns">
                 <div class="mt-8 md:mt-0 flex items-center">
@@ -26,7 +26,7 @@
 
 
                 </div>
-            </div> <!-- end header__social -->
+            </div> 
 
 
             <div class="top-search">
@@ -46,11 +46,11 @@
             <x-menu :categories="$categories" :users="$users"/>
 
 
-        </div> <!-- header-content -->
-    </header> <!-- header -->
+        </div> 
+    </header> 
     <div class="pageheader-content row">
         <x-feature-post-card :posts="$recentPost"/>
-    </div> <!-- end pageheader-content row -->
+    </div> 
 
 
 </section>

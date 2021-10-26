@@ -4,25 +4,24 @@
         <header class="header">
             <div class="header__content row">
 
-                <div class="header__logo">
-                    <a class="logo" href="index.html">
-                        <img src="/images/logo.svg" alt="Homepage">
-                    </a>
-                </div> <!-- end header__logo -->
+            <div class="header__logo">
+                <a class="logo">
+                    <img src="/images/logogen.png" alt="Homepage">
+                </a>
+            </div> 
 
                 <nav class="header__nav-wrap">
 
                    <a href="/" title="">Back To Home</a>
 
-                </nav> <!-- end header__nav-wrap -->
+                </nav> 
 
-            </div> <!-- header-content -->
+            </div>
         </header>
     </div>
 
 
-    <!-- s-content
-    ================================================== -->
+  
     <section class="s-content s-content--narrow s-content--no-padding-bottom">
         <article class="row format-standard">
             <div class="s-content__header ">
@@ -48,7 +47,7 @@
                 <div class="s-content__post-thumb">
                     <img src="{{asset('storage/image/'.$post->image)}}" alt="">
                 </div>
-            </div> <!-- end s-content__media -->
+            </div> 
 
 
             <div class="col-full s-content__main">
@@ -82,19 +81,21 @@
             @endadmin
 
 
-            <section >
-                @include ('_add-comment-form')
-
-                @foreach ($post->comments as $comment)
+           
+        </article>
+        <section >
+        <h3 class="comm">Comments</h3>
+        @foreach ($post->comments as $comment)
                     <x-post-comment :comment="$comment"/>
                 @endforeach
+
+                @include ('_add-comment-form')
+
             </section>
-        </article>
     </section>
 
 
-    <!-- preloader
-    ================================================== -->
+   
     <div id="preloader">
         <div id="loader">
             <div class="line-scale">

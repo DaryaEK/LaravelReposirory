@@ -50,10 +50,6 @@ Route::patch('/posts/{post}', [AdminPostController::class, 'update'])->middlewar
 
 Route::get('/posts/{post}/delete', [AdminPostController::class, 'destroy'])->middleware('admin');
 
-// Route::middleware('can:admin')->group(function () {
-//     Route::resource('/posts', AdminPostController::class)->except('show');
-// });
-
 Route::group(['middleware' => 'role:autor'], function() {
     Route::get('/posts', function() {
        return 'Добро пожаловать';

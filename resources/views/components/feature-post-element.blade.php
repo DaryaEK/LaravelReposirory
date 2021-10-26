@@ -16,6 +16,6 @@
                 <li>{{$post->created_at->diffForHumans()}}</li>
             </ul>
         </div>
-    </div> <!-- end entry__content -->
+    </div> 
 
-</div> <!-- end entry -->
+</div>
